@@ -1,8 +1,11 @@
 const display = document.getElementById("display");
+
 let timer = null ;
 let startTime = 0;
 let elapsedTime = 0;
 let isRunning = false ;
+
+
 
 function start(){
          
@@ -10,6 +13,7 @@ function start(){
            startTime = Date.now() - elapsedTime;
            timer = setInterval(update, 10);
            isRunning = true;
+           
     }
     
 }
@@ -31,7 +35,10 @@ function reset() {
     elapsedTime = 0;
     isRunning = false;
     display.textContent = "00:00:00:00"; 
+    
 }
+
+
 
 function update(){
     
@@ -53,3 +60,4 @@ function update(){
 
 
 }
+
